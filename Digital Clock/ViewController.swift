@@ -29,8 +29,11 @@ class ViewController: UIViewController {
         // removes second delay on startup
         self.updateTimer()
         
-        // settings view - hidden unless called upon
-        settingsView.isHidden = true 
+        // settingsView - hidden unless called upon
+        settingsView.isHidden = true
+        
+        // rounded edges in settingsView
+        settingsView.layer.cornerRadius = 5
     
     }
 
