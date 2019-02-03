@@ -46,8 +46,12 @@ class ViewController: UIViewController {
     @IBAction func settingsBtn(_ sender: Any) {
         if settingsView.isHidden == true {
             settingsView.isHidden = false
+            settingsButton.setTitle("Hide Settings", for: UIControl.State.normal)
+            settingsButton.alpha = 1.0
         } else {
-            settingsView.isHidden = true 
+            settingsView.isHidden = true
+            settingsButton.setTitle("Show Settings", for: UIControl.State.normal)
+            settingsButton.alpha = 0.5
         }
     }
     
