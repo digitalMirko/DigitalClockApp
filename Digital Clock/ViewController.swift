@@ -59,11 +59,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clockColor(_ sender: Any) {
-        
+        // default color is white
+        if (clockColorSegment.selectedSegmentIndex == 0){
+            label.textColor = UIColor.white
+        }
+        if (clockColorSegment.selectedSegmentIndex == 1){
+            label.textColor = UIColor.black
+        }
+        if (clockColorSegment.selectedSegmentIndex == 2){
+            label.textColor = UIColor.red
+        }
+        if (clockColorSegment.selectedSegmentIndex == 3){
+            label.textColor = UIColor.green
+        }
     }
     
     @IBAction func backgroundColor(_ sender: Any) {
-        
+       
     }
     
     @IBAction func backgroundImage(_ sender: Any) {
