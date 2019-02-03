@@ -28,6 +28,9 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         // removes second delay on startup
         self.updateTimer()
+        
+        // settings view - hidden unless called upon
+        settingsView.isHidden = true 
     
     }
 
@@ -39,9 +42,13 @@ class ViewController: UIViewController {
         
         label.text = timeFormatter.string(from: NSDate() as Date)
     }
-    
+    // used for showing and dismissing the view
     @IBAction func settingsBtn(_ sender: Any) {
-        
+        if settingsView.isHidden == true {
+            settingsView.isHidden = false
+        } else {
+            settingsView.isHidden = true 
+        }
     }
     
     @IBAction func clockColor(_ sender: Any) {
