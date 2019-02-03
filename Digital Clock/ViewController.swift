@@ -75,7 +75,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func backgroundColor(_ sender: Any) {
-       
+        if(clockBackgroundColorSegment.selectedSegmentIndex == 0){
+            self.view.backgroundColor = UIColor.black
+        }
+        if(clockBackgroundColorSegment.selectedSegmentIndex == 1){
+            self.view.backgroundColor = UIColor.white
+        }
+        if(clockBackgroundColorSegment.selectedSegmentIndex == 2){
+            self.view.backgroundColor = UIColor.yellow
+        }
+        if(clockBackgroundColorSegment.selectedSegmentIndex == 3){
+            self.view.backgroundColor = UIColor.blue
+        }
     }
     
     @IBAction func backgroundImage(_ sender: Any) {
