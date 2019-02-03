@@ -9,12 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var label: UILabel!
+    
+    var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // repeats every one second
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        // removes second delay on startup
+        self.updateTimer()
+    
     }
 
+    @objc func updateTimer(){
+        
+        let timeFormatter = DateFormatter()
+        
+        timeFormatter.timeStyle = .medium
+        
+        label.text = timeFormatter.string(from: NSDate() as Date)
+    }
 
 }
 
