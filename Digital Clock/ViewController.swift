@@ -11,6 +11,13 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var settingsView: UIView!
+    @IBOutlet weak var clockColorSegment: UISegmentedControl!
+    @IBOutlet weak var clockBackgroundColorSegment: UISegmentedControl!
+    @IBOutlet weak var backgroundImageSegment: UISegmentedControl!
+    @IBOutlet weak var settingsButton: UIButton!
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     var timer = Timer()
 
@@ -32,6 +39,30 @@ class ViewController: UIViewController {
         
         label.text = timeFormatter.string(from: NSDate() as Date)
     }
+    
+    @IBAction func settingsBtn(_ sender: Any) {
+        
+    }
+    
+    @IBAction func clockColor(_ sender: Any) {
+        
+    }
+    
+    @IBAction func backgroundColor(_ sender: Any) {
+        
+    }
+    
+    @IBAction func backgroundImage(_ sender: Any) {
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 
 }
 
