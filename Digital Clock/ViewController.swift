@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         // rounded edges in settingsView
         settingsView.layer.cornerRadius = 5
     
+        // rounded edges in settingsView button
+        settingsButton.layer.cornerRadius = 5
     }
 
     @objc func updateTimer(){
@@ -54,7 +56,7 @@ class ViewController: UIViewController {
         } else {
             settingsView.isHidden = true
             settingsButton.setTitle("Show Settings", for: UIControl.State.normal)
-            settingsButton.alpha = 0.5
+            settingsButton.alpha = 0.25
         }
     }
     
@@ -87,19 +89,26 @@ class ViewController: UIViewController {
         if(clockBackgroundColorSegment.selectedSegmentIndex == 3){
             self.view.backgroundColor = UIColor.blue
         }
+        // it hides the background image when working in this segment
+        backgroundImageView.isHidden = true
     }
     
     @IBAction func backgroundImage(_ sender: Any) {
-        
+        if(backgroundImageSegment.selectedSegmentIndex == 0) {
+            backgroundImageView.image = UIImage(named: "Background1")
+        }
+        if(backgroundImageSegment.selectedSegmentIndex == 1) {
+            backgroundImageView.image = UIImage(named: "Background2")
+        }
+        if(backgroundImageSegment.selectedSegmentIndex == 2) {
+            backgroundImageView.image = UIImage(named: "Background3")
+        }
+        if(backgroundImageSegment.selectedSegmentIndex == 3) {
+            backgroundImageView.image = UIImage(named: "Background4")
+        }
+        // it reveals the background image when working in this segment
+        backgroundImageView.isHidden = false
     }
     
-    
-    
-    
-    
-    
-    
-    
-
 }
 
